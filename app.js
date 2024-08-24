@@ -3,6 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const userInput = document.getElementById('user-input');
     const sendButton = document.querySelector('.send-btn');
 
+     // JS functionality to handle sending messages
+     document.getElementById('send-btn').addEventListener('click', function () {
+        let userInput = document.getElementById('user-input').value;
+        if (userInput.trim() !== '') {
+            let chatBody = document.getElementById('chat-body');
+            let userMessage = `<div class="user-message">${userInput}</div>`;
+            chatBody.innerHTML += userMessage;
+            document.getElementById('user-input').value = '';
+            
+            // Simulate bot response with loading indicator
+            chatBody.innerHTML += `<div class="loading-dots"><span></span><span></span><span></span></div>`;
+            
+            setTimeout(() => {
+                document.querySelector('.loading-dots').remove();
+                chatBody.innerHTML += `<div class="bot-message">I'm processing your request...</div>`;
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }, 2000);
+            
+            chatBody.scrollTop = chatBody.scrollHeight; // Auto scroll to bottom
+        }
+    });
+
     // Function to add user message to chat
     function addUserMessage(message) {
         const userMessage = document.createElement('div');
