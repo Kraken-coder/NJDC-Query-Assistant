@@ -60,8 +60,14 @@ The project requires the following Python packages:
 To install the packages, add them to your `requirements.txt` file, then run:
 
 ```bash
-pip install ChatBot llama-index ollama
+pip install llama-index ollama
 ```
+Also install Ollama on you system and then from cmd run
+```bash
+ollama run llama3:instruct
+ollama run llama3
+```
+
 
 ### Running the Chatbot
 
