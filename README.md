@@ -1,3 +1,85 @@
 # NJDC-Query-Assistant
-Goal of this project to make a Chatbot who can assist by providing information from NJDC
-problem statement envisages a Chatbot or virtual assistant be developed to understand the user and allow them to ask questions and get information related to DoJ such as o Know about the various divisions of DoJ, o Number of Judges appointed at Supreme Court, High Courts, District & Subordinate Courts and current vacancies. o Pendency of cases through National Judicial Data Grid (NJDG) o Procedure to pay fine of traffic violation o Live Streaming of Court Cases o Steps for the eFiling and ePay o Know about working Fast track courts o Ways to download eCourts Services Mobile app o Availing Tele Law Services o Know current status of case This chatbot should be able to learn over time to add excellent value to customer interactions and should be capable for handling large data sets if scope expanded. • Expected Solution: An interactive Chatbot or virtual assistant be developed for the Department of Justice website resulting into desired information as per the command.
+
+## Project Overview
+
+The NJDC-Query-Assistant is an AI-powered chatbot designed to assist users by providing information related to the Department of Justice (DoJ). The chatbot can answer queries about various divisions of the DoJ, the number of judges appointed in different courts, case pendency data from the National Judicial Data Grid (NJDG), procedures for paying traffic fines, live streaming of court cases, eFiling and ePay steps, Fast Track Courts, the eCourts Services Mobile app, Tele Law Services, and current case statuses.
+
+### Key Features:
+- **Divisions of DoJ**: Information about various divisions within the DoJ.
+- **Judges and Vacancies**: Number of judges in Supreme Court, High Courts, District & Subordinate Courts, and current vacancies.
+- **Case Pendency**: Data on pending cases through NJDG.
+- **Traffic Fine Payment**: Guidance on how to pay fines for traffic violations.
+- **Live Streaming**: Information on live streaming of court cases.
+- **eFiling and ePay**: Steps for eFiling and ePay services.
+- **Fast Track Courts**: Details about working Fast Track Courts.
+- **eCourts Services Mobile App**: Information on downloading and using the eCourts Services Mobile app.
+- **Tele Law Services**: Access to Tele Law services.
+- **Case Status**: Information on the current status of specific cases.
+
+The chatbot is designed to learn over time, improving its responses and capabilities, and is capable of handling large datasets.
+
+## Installation Guide
+
+To set up and run the NJDC-Query-Assistant, follow these steps:
+
+### Prerequisites
+
+Ensure you have the following installed:
+- Python 3.8 or above
+- pip (Python package installer)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/NJDC-Query-Assistant.git
+cd NJDC-Query-Assistant
+```
+
+### Install Required Packages
+
+Create a virtual environment and install the necessary Python packages:
+
+```bash
+# Create a virtual environment (optional but recommended)
+python3 -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+
+# Install required packages
+pip install -r requirements.txt
+```
+
+### Required Python Packages
+
+The project requires the following Python packages:
+
+- `ChatBot`: A custom package for creating and managing the chatbot.
+- `llama-index`: For creating an AI-driven index-based response system.
+- `Ollama`: A package for interacting with LLM-based tools.
+- `ReActAgent`: For implementing the ReAct framework within the chatbot.
+
+To install the packages, add them to your `requirements.txt` file, then run:
+
+```bash
+pip install ChatBot llama-index ollama
+```
+
+### Running the Chatbot
+
+You can test the chatbot using the following script:
+
+```python
+from ChatBoT import Engine
+
+# Initialize the chatbot engine
+trial = Engine()
+
+# Example of querying the chatbot
+trial.AgentToolMaster()
+print(trial.complete("Tell me which state has the most number of pending criminal cases"))
+```
+
+### Known Issues
+
+- Ensure that all dependencies are correctly installed.
+- The chatbot currently supports queries in English.
+- FrontEnd and Backend are not linked.
