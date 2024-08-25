@@ -12,5 +12,5 @@ def Court(text):
     return f'generated job description from other llm : {completed_text}'
 court = FunctionTool.from_defaults(Court,
                                        name="Court",
-                                       description="Use this tool when you have to access information about the courts",
+                                       description="Use this tool when you have to access information about the courts. To use this tool just pass the user query to it as argument and it only takes one argument",
                                        return_direct=False)
