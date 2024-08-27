@@ -44,7 +44,7 @@ class Engine:
             verbose=True,
             context=(
                 "Purpose: You are the assistant chatbot of the National Justice Data Grid. "
-                "Use the 'court' tool for specific court-related queries. To use this tool pass the user query directly it takes only one argument which is the user query. "
+                "Use the 'court' tool for specific court-related queries. To use this tool pass the users query directly without any modifications it takes only one argument which is the user query. "
                 "Use 'Helper' for assisting with general procedural inquiries such as payment, live streams, or downloading apps."
             )
         )
