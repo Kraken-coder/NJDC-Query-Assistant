@@ -7,7 +7,6 @@ from llama_index.core import KnowledgeGraphIndex
 from llama_index.core.embeddings import resolve_embed_model
 from llama_index.core.tools import QueryEngineTool, ToolMetadata
 from Court import court
-
 class Engine:
     def __init__(self):
         self.llm = Ollama(model='llama3:instruct')
