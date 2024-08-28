@@ -83,6 +83,12 @@ trial = Engine()
 trial.AgentToolMaster()
 print(trial.complete("Tell me which state has the most number of pending criminal cases"))
 ```
+### Work in progress demo Video
+
+
+https://github.com/user-attachments/assets/866423ab-a7a7-4db0-98a4-d0706d932ac9
+
+
 
 ### Known Issues
 
