@@ -11,6 +11,8 @@ class Engine:
     def __init__(self):
         self.llm = Ollama(model='llama3:instruct')
         documents = SimpleDirectoryReader("NJDC-Query-Assistant/ChatBOT/datacheck", exclude_hidden=False).load_data()
+        #documents = SimpleDirectoryReader("NJDC-Query-Assistant/ChatBOT/datacheck", exclude_hidden=False , recursive= True).load_data() #try this if you get the directory error
+        #documents = SimpleDirectoryReader(input_files= ["NJDC-Query-Assistant\ChatBOT\datacheck\DocumentSIH.pdf"], exclude_hidden=False , recursive= True).load_data() #also try this if still does not work
         graph_store = SimpleGraphStore()
         storage_context = StorageContext.from_defaults(graph_store=graph_store)
         embed_model = resolve_embed_model("local:BAAI/bge-m3")
