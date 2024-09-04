@@ -22,46 +22,12 @@ The chatbot is designed to learn over time, improving its responses and capabili
 
 To set up and run the NJDC-Query-Assistant, follow these steps:
 
-### Prerequisites
 
-Ensure you have the following installed:
-- Python 3.8 or above
-- pip (Python package installer)
 
-### Clone the Repository
+https://github.com/user-attachments/assets/c85d6615-6206-4d17-b1ec-d51db6e24aac
 
-```bash
-git clone https://github.com/yourusername/NJDC-Query-Assistant.git
-cd NJDC-Query-Assistant
-```
 
-### Install Required Packages
 
-Create a virtual environment and install the necessary Python packages:
-
-```bash
-# Create a virtual environment (optional but recommended)
-python3 -m venv env
-source env/bin/activate  # On Windows use `env\Scripts\activate`
-
-# Install required packages
-pip install -r requirements.txt
-```
-
-### Required Python Packages
-
-The project requires the following Python packages:
-
-- `ChatBot`: A custom package for creating and managing the chatbot.
-- `llama-index`: For creating an AI-driven index-based response system.
-- `Ollama`: A package for interacting with LLM-based tools.
-- `ReActAgent`: For implementing the ReAct framework within the chatbot.
-
-To install the packages, add them to your `requirements.txt` file, then run:
-
-```bash
-pip install llama-index ollama
-```
 Also install Ollama on you system and then from cmd run
 ```bash
 ollama run llama3:instruct
